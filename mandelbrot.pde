@@ -14,7 +14,7 @@ PVector pivot;
 void setup() {
   size(SIZE,SIZE);
   pg = createGraphics(SIZE, SIZE);
-  zoom.push(new Rectangle(-2, -2, 4, 4));
+  zoom.push(new Rectangle(-3, -2, 4, 4));
   background(0);
 }
 
@@ -34,16 +34,16 @@ void draw() {
   image(pg, 0, 0);
   
   if (drawSelection) {
-    float w = (mouseX - p.x);
-    float h = (mouseY - p.y);
+    float w = (mouseX - pivot.x);
+    float h = (mouseY - pivot.y);
     noFill();
     stroke(255);
-    rect(p.x, p.y, w, h);
+    rect(pivot.x, pivot.y, w, h);
   }  
 }
 
 void mousePressed() {
-  p = new PVector(mouseX, mouseY);
+  pivot = new PVector(mouseX, mouseY);
   drawSelection = true;
 }
 
