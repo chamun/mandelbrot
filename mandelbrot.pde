@@ -1,3 +1,4 @@
+/* Author: Rodrigo Chamun */
 import java.util.Stack;
 
 static final int SIZE = 700;
